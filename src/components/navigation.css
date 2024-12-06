@@ -1,19 +1,23 @@
 .top-bar {
-  position: relative;
+  background: #1c1d21;
+  height: 50px;
 }
 
-.glass {
-  -webkit-filter: blur(1px);
-  min-width: 100vw;
-  height: 80px;
-  position: absolute;
+.title-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.banner {
-  background-image: url("../assets/banner.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  min-width: 100vw;
-  height: 80px;
-  position: absolute;
+
+.header-text {
+  margin: 0;
+  text-align: center;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 20px;
+}
+
+.header-highlight {
+    color: red;
 }

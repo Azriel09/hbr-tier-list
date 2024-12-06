@@ -1,0 +1,31 @@
+.tab-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab2-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-list label {
+  background-color: #5f6066;
+  min-height: 60px;
+  min-width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 5px;
+}
+.tab-list input[type="radio"] {
+  display: none;
+}
+[type="radio"]:checked + label {
+  background-color: #b64040;
+  z-index: 1;
+}

@@ -5,9 +5,10 @@ export default function Navigation() {
     <div>
       <div>
         <div className="top-bar">
-          <div className="glass">
-            {" "}
-            <div className="banner"></div>
+          <div className="title-container">
+            <h1 className="header-text">
+              Heaven Burns <span className="header-highlight">Red</span>
+            </h1>
           </div>
         </div>
       </div>
