@@ -1,0 +1,19 @@
+.top-bar {
+  position: relative;
+}
+
+.glass {
+  -webkit-filter: blur(1px);
+  min-width: 100vw;
+  height: 80px;
+  position: absolute;
+}
+.banner {
+  background-image: url("../assets/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-width: 100vw;
+  height: 80px;
+  position: absolute;
+}
