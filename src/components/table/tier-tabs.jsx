@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-import "./tier-list.css";
+import "./tier-tabs.css";
+import MainContent from "./main-content";
 export default function TierList() {
   const [selectedTab, setSelectedTab] = useState(0);
   const changeTab = (e) => {
     setSelectedTab(e.target.value);
-    console.log(e.target.value);
+   
   };
   return (
     <div>
@@ -35,7 +36,18 @@ export default function TierList() {
             <span>HBR EN</span> <span>&#40;+6 months&#41;</span>
           </div>
         </label>
+        <input
+          className="radio-tab tab-3"
+          type="radio"
+          id="tab3"
+          name="tab"
+          value={2}
+          checked={selectedTab == 2}
+          onChange={changeTab}
+        />
+        <label htmlFor="tab3">HBR JP</label>
       </div>
+      <MainContent selectedTab={selectedTab} />
     </div>
   );
 }
