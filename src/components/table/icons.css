@@ -1,12 +1,9 @@
 .image-gallery {
-  min-width: 90vw;
   min-height: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
   flex-wrap: wrap;
-}
-
-.galleryImg {
-  width: 25px;
 }
