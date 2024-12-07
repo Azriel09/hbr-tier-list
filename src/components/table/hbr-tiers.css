@@ -10,4 +10,36 @@
   min-height: auto;
   border: 2px solid gray;
   font-family: "Chakra Petch", sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+.tier-rank {
+  margin-top: auto;
+  margin-bottom: auto;
+  min-width: 15%;
+  padding-left: 10px;
+}
+
+.tier-dataEN {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 70%;
+  gap: 30px;
+}
+
+.tier-student-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 20%;
+}
+
+.student-tier {
+  color: #ea6e6e;
+  font-weight: 600;
 }
