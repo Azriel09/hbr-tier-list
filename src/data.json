@@ -1,0 +1,108 @@
+{
+  "Tama": [
+    {
+      "id": "tama_s1",
+      "rarity": "S1",
+      "role": ["healer"],
+      "tier": [6],
+      "release-date": "released",
+      "element": "null"
+    },
+    {
+      "id": "tama_ss1",
+      "rarity": "SS1",
+      "role": ["healer"],
+      "tier": [8],
+      "release-date": "released",
+      "element": "null"
+    },
+    {
+      "id": "tama_ss2",
+      "rarity": "SS2",
+      "role": ["healer", "buffer"],
+      "tier": [7, 5],
+      "release-date": "released",
+      "element": "null"
+    }
+  ],
+  "Ruka": [
+    {
+      "id": "ruka_ss0",
+      "rarity": "SS0",
+      "role": ["healer", "single-dps"],
+      "tier": [3, 3],
+      "release-date": "released",
+      "element": "null"
+    },
+    {
+      "id": "ruka_ss1",
+      "rarity": "SS1",
+      "role": ["single-dps"],
+      "tier": [8],
+      "release-date": "released",
+      "element": "fire"
+    },
+    {
+      "id": "ruka_ss2",
+      "rarity": "SS2",
+      "role": ["aoe-dps"],
+      "tier": [8],
+      "release-date": "released",
+      "element": "light"
+    }
+  ],
+  "Yuki": [
+    {
+      "id": "yuki_ss1",
+      "rarity": "SS1",
+      "role": ["aoe-dps"],
+      "tier": [0],
+      "release-date": "released",
+      "element": "null"
+    },
+    {
+      "id": "yuki_ss2",
+      "rarity": "SS2",
+      "role": ["single-dps"],
+      "tier": [2],
+      "release-date": "released",
+      "element": "fire"
+    }
+  ],
+  "Karen": [
+    {
+      "id": "karen_ss1",
+      "rarity": "SS1",
+      "role": ["utility", "single-dps"],
+      "tier": [6, 5],
+      "release-date": "released",
+      "element": "null"
+    },
+    {
+      "id": "karen_ss2",
+      "rarity": "SS2",
+      "role": ["utility", "aoe-dps"],
+      "tier": [6, 4],
+      "release-date": "released",
+      "element": "fire"
+    }
+  ],
+  "Megumi": [
+    {
+      "id": "megumi_ss1",
+      "rarity": "SS1",
+      "role": ["utility"],
+      "tier": [1],
+      "release-date": "released",
+      "element": "null"
+    },
+    {
+      "id": "megumi_ss2",
+      "rarity": "SS2",
+      "role": ["debuffer"],
+      "tier": [8],
+      "release-date": "released",
+      "element": "light"
+    }
+  ]
+}

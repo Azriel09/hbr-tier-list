@@ -1,23 +1,19 @@
-import { useState, useEffect } from "react";
 import HBRJp from "./hbr-jp";
 import HBRPresent from "./hbr-present";
 import HBRSix from "./hbr-6months";
+import data from "../../data.json";
 export default function MainContent({ selectedTab }) {
-  const [activeTab, setActiveTab] = useState(selectedTab);
 
-  useEffect(() => {
-    console.log(typeof selectedTab);
-  }, [selectedTab]);
   const renderTierList = () => {
     switch (selectedTab) {
       case "0":
-        return <HBRPresent />;
+        return <HBRPresent data={data}/>;
       case "1":
-        return <HBRSix />;
+        return <HBRSix data={data}/>;
       case "2":
-        return <HBRJp />;
+        return <HBRJp data={data}/>;
       default:
-        return <HBRPresent />;
+        return <HBRPresent data={data}/>;
     }
   };
 
