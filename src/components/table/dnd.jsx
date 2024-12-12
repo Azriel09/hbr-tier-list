@@ -18,7 +18,7 @@ import Drag from "./drag";
 import Drop from "./drop";
 import "./drag.css";
 export default function TierListTemplate({ dataEN }) {
-  const containers = ["A", "B", "C"];
+  const containers = ["A", "B", "C", "D", "E"];
   const [parent, setParent] = useState(null);
   const draggableMarkup = <Drag id="draggable">Drag me</Drag>;
   // useEffect(() => {
@@ -42,14 +42,21 @@ export default function TierListTemplate({ dataEN }) {
     <div className="dnd-container">
       <DndContext onDragEnd={handleDragEnd}>
         {parent === null ? draggableMarkup : null}
-
-        {containers.map((id) => (
-          // We updated the Droppable component so it would accept an `id`
-          // prop and pass it to `useDroppable`
-          <Drop key={id} id={id}>
-            {parent === id ? draggableMarkup : `${id}-Drag Here`}
-          </Drop>
-        ))}
+        <div className="columns-container">
+          {containers.map((id, index) => (
+            // We updated the Droppable component so it would accept an `id`
+            // prop and pass it to `useDroppable`
+            <div className="column-wrapper" key={index}>
+              <Drop key={id} id={id}>
+                {parent === id ? (
+                  draggableMarkup
+                ) : (
+                  <div className="drop-container">{id}</div>
+                )}
+              </Drop>
+            </div>
+          ))}
+        </div>
       </DndContext>
     </div>
   );

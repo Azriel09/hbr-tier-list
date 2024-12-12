@@ -3,11 +3,11 @@
     {
       "id": "tama_s1",
       "rarity": "S1",
-      "role": ["healer"],
+      "role": ["s-healer"],
       "tier": [6],
       "release-date": "released",
       "element": "null",
-      "class": "31-A"
+      "section": "31-A"
     },
     {
       "id": "tama_ss1",
@@ -16,7 +16,7 @@
       "tier": [8],
       "release-date": "released",
       "element": "null",
-      "class": "31-A"
+      "section": "31-A"
     },
     {
       "id": "tama_ss2",
@@ -25,7 +25,7 @@
       "tier": [7, 5],
       "release-date": "released",
       "element": "null",
-      "class": "31-A"
+      "section": "31-A"
     }
   ],
   "Ruka": [
@@ -36,7 +36,7 @@
       "tier": [3, 3],
       "release-date": "released",
       "element": "null",
-      "class": "31-A"
+      "section": "31-A"
     },
     {
       "id": "ruka_ss1",
@@ -45,7 +45,7 @@
       "tier": [8],
       "release-date": "released",
       "element": "fire",
-      "class": "31-A"
+      "section": "31-A"
     },
     {
       "id": "ruka_ss2",
@@ -54,7 +54,7 @@
       "tier": [8],
       "release-date": "released",
       "element": "light",
-      "class": "31-A"
+      "section": "31-A"
     }
   ],
   "Yuki": [
@@ -65,7 +65,7 @@
       "tier": [0],
       "release-date": "released",
       "element": "null",
-      "class": "31-A"
+      "section": "31-A"
     },
     {
       "id": "yuki_ss2",
@@ -74,7 +74,7 @@
       "tier": [2],
       "release-date": "released",
       "element": "fire",
-      "class": "31-A"
+      "section": "31-A"
     }
   ],
   "Karen": [
@@ -85,7 +85,7 @@
       "tier": [6, 5],
       "release-date": "released",
       "element": "null",
-      "class": "31-A"
+      "section": "31-A"
     },
     {
       "id": "karen_ss2",
@@ -94,7 +94,7 @@
       "tier": [6, 4],
       "release-date": "released",
       "element": "fire",
-      "class": "31-A"
+      "section": "31-A"
     }
   ],
   "Megumi": [
@@ -105,7 +105,7 @@
       "tier": [1],
       "release-date": "released",
       "element": "null",
-      "class": "31-A"
+      "section": "31-A"
     },
     {
       "id": "megumi_ss2",
@@ -114,7 +114,7 @@
       "tier": [8],
       "release-date": "released",
       "element": "light",
-      "class": "31-A"
+      "section": "31-A"
     }
   ]
 }

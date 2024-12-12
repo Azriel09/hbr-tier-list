@@ -2,7 +2,9 @@ import HBRJp from "./hbr-jp";
 import HBRPresent from "./hbr-present";
 import HBRSix from "./hbr-6months";
 import dataEN from "../../data-en.json";
-import TierlistTemplate from "./tierlist-template";
+import TierlistTemplate from "./dnd";
+import "primereact/resources/primereact.css";
+import "./main-content.css";
 export default function MainContent({ selectedTab }) {
   const renderTierList = () => {
     switch (selectedTab) {
@@ -17,5 +19,5 @@ export default function MainContent({ selectedTab }) {
     }
   };
 
-  return <div>{renderTierList()}</div>;
+  return <main>{renderTierList()}</main>;
 }

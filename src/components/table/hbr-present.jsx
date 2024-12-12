@@ -27,7 +27,7 @@ export default function HBRPresent({ dataEN }) {
           return (
             <div key={descendingKey} className="tier">
               <div className="tier-rank">{descendingKey}</div>
-
+              
               <div className="tier-dataEN">
                 {name.map((student, index) => {
                   return (

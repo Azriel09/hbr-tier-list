@@ -1,9 +1,6 @@
 import "./icons.css";
 
 export default function IconRenderer({ student, rarity }) {
-  const images = import.meta.glob(
-    "../../assets/icons/31-A/**/*.{png,jpg,jpeg,webp}"
-  );
   return (
     <div className="image-gallery">
       <img
