@@ -3,7 +3,7 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { ColumnGroup } from "primereact/columngroup";
 import { Row } from "primereact/row";
-import "primereact/resources/primereact.css";
+
 import BodyTemplates from "./bodyTemplates";
 
 const {
@@ -18,65 +18,227 @@ const {
   sDebufferTemplate,
   sHealerTemplate,
 } = BodyTemplates();
+const roles = [
+  "buffer",
+  "defender",
+  "healer",
+  "debuffer",
+  "utility",
+  "single-dps",
+  "aoe-dps",
+  "s-buffer",
+  "s-debuffer",
+  "s-healer",
+];
 export default function HBRJp({ dataEN }) {
   const [tierData, setTierData] = useState();
+
+  // useEffect(() => {
+  //   let data = [];
+  //   if (dataEN) {
+  //     Object.keys(dataEN).map((student) => {
+  //       dataEN[student].map((name) => {
+  //         let student_obj = {};
+  //         const element = name["element"];
+  //         const rarity = name["rarity"];
+  //         const release = name["release-date"];
+  //         const section = name["section"];
+  //         if (name["tier"].length >= 2) {
+  //           name["tier"].map((tier, index) => {
+  //             const role = name["role"][index];
+
+  //             student_obj = {
+  //               ...student_obj,
+  //               tier: tier,
+  //               student: student,
+  //               rarity: rarity,
+  //               role: role,
+  //               element: element,
+  //               release: release,
+  //               section: section,
+  //             };
+  //           });
+  //         } else {
+  //           const tier = name["tier"][0];
+  //           const role = name["role"][0];
+  //           student_obj = {
+  //             ...student_obj,
+  //             tier: tier,
+  //             student: student,
+  //             rarity: rarity,
+  //             role: role,
+  //             element: element,
+  //             release: release,
+  //             section: section,
+  //           };
+  //         }
+  //         data.push(student_obj);
+  //       });
+  //     });
+  //     setTierData(data);
+  //   }
+  // }, [dataEN]);
+
   useEffect(() => {
     let data = [];
     if (dataEN) {
-      Object.keys(dataEN).map((student) => {
-        dataEN[student].map((name) => {
-          let student_obj = {};
-          const element = name["element"];
-          const rarity = name["rarity"];
-          const release = name["release-date"];
-          const section = name["section"];
-          if (name["tier"].length >= 2) {
-            name["tier"].map((tier, index) => {
-              const role = name["role"][index];
+      Array.from({ length: 11 }, (_, index) => {
+        const descendingTier = 10 - index;
+        let tier_roles = [];
+        roles.map((role) => {
+          tier_roles.push({ [role]: [] });
+        });
+        data.push({ [descendingTier]: tier_roles });
+      });
 
-              student_obj = {
-                ...student_obj,
-                tier: tier,
-                student: student,
-                rarity: rarity,
-                role: role,
-                element: element,
-                release: release,
-                section: section,
-              };
+      Object.keys(dataEN).map((studentName) => {
+        const studentInfo = dataEN[studentName];
+        studentInfo.map((student) => {
+          let name = studentName;
+          let rarity = student["rarity"];
+          let element = student["element"];
+          let section = student["section"];
+          let release = student["release-date"];
+          if (student["role"].length >= 2) {
+            student["role"].map((j, index) => {
+              let tier = student["tier"][index];
+              let role = j;
+
+              data.map((tiers) => {
+                Object.keys(tiers).map((rank) => {
+                  if (tier == rank) {
+                    const roles_array = tiers[rank];
+                    roles_array.map((jobs) => {
+                      Object.keys(jobs).map((job) => {
+                        if (job == role) {
+                          let obj_data = {
+                            name: name,
+                            rarity: rarity,
+                            element: element,
+                            section: section,
+                            release: release,
+                          };
+                          jobs[job].push(obj_data);
+                        }
+                      });
+                    });
+                  } else {
+                    return;
+                  }
+                });
+              });
             });
           } else {
-            const tier = name["tier"][0];
-            const role = name["role"][0];
-            student_obj = {
-              ...student_obj,
-              tier: tier,
-              student: student,
-              rarity: rarity,
-              role: role,
-              element: element,
-              release: release,
-              section: section,
-            };
+            let tier = student["tier"][0];
+            let role = student["role"][0];
+            data.map((tiers) => {
+              Object.keys(tiers).map((rank) => {
+                if (tier == rank) {
+                  const roles_array = tiers[rank];
+                  roles_array.map((jobs) => {
+                    Object.keys(jobs).map((job) => {
+                      if (job == role) {
+                        let obj_data = {
+                          name: name,
+                          rarity: rarity,
+                          element: element,
+                          section: section,
+                          release: release,
+                        };
+                        jobs[job].push(obj_data);
+                      }
+                    });
+                  });
+                } else {
+                  return;
+                }
+              });
+            });
           }
-          data.push(student_obj);
         });
       });
       setTierData(data);
     }
   }, [dataEN]);
-  //   const [sales] = useState([
-  //     { product: 'Bamboo Watch', lastYearSale: 51, thisYearSale: 40, lastYearProfit: 54406, thisYearProfit: 43342 },
-  //     { product: 'Black Watch', lastYearSale: 83, thisYearSale: 9, lastYearProfit: 423132, thisYearProfit: 312122 },
-  //     { product: 'Blue Band', lastYearSale: 38, thisYearSale: 5, lastYearProfit: 12321, thisYearProfit: 8500 },
-  //     { product: 'Blue T-Shirt', lastYearSale: 49, thisYearSale: 22, lastYearProfit: 745232, thisYearProfit: 65323 },
-  //     { product: 'Brown Purse', lastYearSale: 17, thisYearSale: 79, lastYearProfit: 643242, thisYearProfit: 500332 },
-  //     { product: 'Chakra Bracelet', lastYearSale: 52, thisYearSale: 65, lastYearProfit: 421132, thisYearProfit: 150005 },
-  //     { product: 'Galaxy Earrings', lastYearSale: 82, thisYearSale: 12, lastYearProfit: 131211, thisYearProfit: 100214 },
-  //     { product: 'Game Controller', lastYearSale: 44, thisYearSale: 45, lastYearProfit: 66442, thisYearProfit: 53322 },
-  //     { product: 'Gaming Set', lastYearSale: 90, thisYearSale: 56, lastYearProfit: 765442, thisYearProfit: 296232 },
-  //     { product: 'Gold Phone Case', lastYearSale: 75, thisYearSale: 54, lastYearProfit: 21212, thisYearProfit: 12533 }
-  // ]);
+
+  // How the data would look like from the code above
+  // I could just format the json file this way but that would be boring
+  let tierDataFormat = [
+    {
+      tier_10: [
+        {
+          buffer: [
+            {
+              name: "",
+              rarity: "",
+              element: "",
+              section: "",
+              release: "",
+            },
+            {
+              name: "",
+              rarity: "",
+              element: "",
+              section: "",
+              release: "",
+            },
+          ],
+          healer: [
+            {
+              name: "",
+              rarity: "",
+              element: "",
+              section: "",
+              release: "",
+            },
+            {
+              name: "",
+              rarity: "",
+              element: "",
+              section: "",
+              release: "",
+            },
+          ],
+        },
+      ],
+      tier_9: [
+        {
+          buffer: [
+            {
+              name: "",
+              rarity: "",
+              element: "",
+              section: "",
+              release: "",
+            },
+            {
+              name: "",
+              rarity: "",
+              element: "",
+              section: "",
+              release: "",
+            },
+          ],
+          healer: [
+            {
+              name: "",
+              rarity: "",
+              element: "",
+              section: "",
+              release: "",
+            },
+            {
+              name: "",
+              rarity: "",
+              element: "",
+              section: "",
+              release: "",
+            },
+          ],
+        },
+      ],
+    },
+  ];
   const tierBodyTemplate = (rowData) => {
     return (
       <div className="flex align-items-center gap-2">
@@ -117,7 +279,7 @@ export default function HBRJp({ dataEN }) {
   return (
     <div className="card">
       <DataTable
-        value={tierData}
+        // value={tierData}
         headerColumnGroup={headerGroup}
         tableStyle={{ minWidth: "50rem" }}
         rowGroupMode="rowspan"
