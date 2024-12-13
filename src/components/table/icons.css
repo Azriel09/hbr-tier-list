@@ -7,3 +7,19 @@
   gap: 20px;
   flex-wrap: wrap;
 }
+
+img {
+  border-radius: 50%;
+  width: 70px;
+}
+.fire {
+  border: 5px solid rgb(225, 88, 88);
+}
+
+.lightning {
+  border: 5px solid rgb(199, 199, 21);
+}
+
+.dark {
+  border: 5px solid #e417e7;
+}

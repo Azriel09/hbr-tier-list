@@ -6,7 +6,19 @@ import { Row } from "primereact/row";
 
 import BodyTemplates from "./bodyTemplates";
 
-const { tierBodyTemplate, healerTemplate } = BodyTemplates();
+const {
+  tierBodyTemplate,
+  bufferTemplate,
+  defenderTemplate,
+  healerTemplate,
+  debufferTemplate,
+  utilityTemplate,
+  singleDpsTemplate,
+  aoeDpsTemplate,
+  sBufferTemplate,
+  sDebufferTemplate,
+  sHealerTemplate,
+} = BodyTemplates();
 const roles = [
   "buffer",
   "defender",
@@ -92,7 +104,7 @@ export default function HBRJp({ dataEN }) {
           }
         });
       });
-      console.log(data);
+      setTierData(data);
     }
   }, [dataEN]);
 
@@ -180,7 +192,6 @@ export default function HBRJp({ dataEN }) {
     },
   ];
 
-
   const roleBodyTemplate = (rowData) => {
     return (
       <div className="flex align-items-center gap-2">
@@ -192,46 +203,47 @@ export default function HBRJp({ dataEN }) {
   const headerGroup = (
     <ColumnGroup>
       <Row>
-        <Column header="Tier" rowSpan={2} align={"left"} />
-        <Column header="Buffer" rowSpan={2} align={"left"} />
-        <Column header="Defender" rowSpan={2} align={"left"} />
-        <Column header="Healer" rowSpan={2} align={"left"} />
-        <Column header="Debuffer" rowSpan={2} align={"left"} />
-        <Column header="Utility" rowSpan={2} align={"left"} />
+        <Column header="Tier" rowSpan={2} align={"center"} />
+        <Column header="Buffer" rowSpan={2} align={"center"} />
+        <Column header="Defender" rowSpan={2} align={"center"} />
+        <Column header="Healer" rowSpan={2} align={"center"} />
+        <Column header="Debuffer" rowSpan={2} align={"center"} />
+        <Column header="Utility" rowSpan={2} align={"center"} />
         <Column header="Main Damage" colSpan={2} align={"center"} />
         <Column header="Notable S" colSpan={3} align={"center"} />
       </Row>
       <Row>
-        <Column header="Single Target" align={"left"} />
-        <Column header="AoE" align={"left"} />
-        <Column header="Buffer" align={"left"} />
-        <Column header="Debuffer" align={"left"} />
-        <Column header="Healer" align={"left"} />
+        <Column header="Single Target" align={"center"} />
+        <Column header="AoE" align={"center"} />
+        <Column header="Buffer" align={"center"} />
+        <Column header="Debuffer" align={"center"} />
+        <Column header="Healer" align={"center"} />
       </Row>
     </ColumnGroup>
   );
   return (
     <div className="card">
       <DataTable
-        // value={tierData}
+        value={tierData}
         headerColumnGroup={headerGroup}
         tableStyle={{ minWidth: "50rem" }}
         rowGroupMode="rowspan"
         groupRowsBy="tier"
         sortField="tier"
+        showGridlines
         sortOrder={-1}
       >
         <Column field="tier" body={tierBodyTemplate} />
-        <Column field="buffer" />
-        <Column field="defender" />
+        <Column field="buffer" body={bufferTemplate} />
+        <Column field="defender" body={defenderTemplate} />
         <Column field="healer" body={healerTemplate} />
-        <Column field="debuffer" />
-        <Column field="utility" />
-        <Column field="single-dps" />
-        <Column field="aoe-dps" />
-        <Column field="s-buffer" />
-        <Column field="s-debuffer" />
-        <Column field="s-healer" />
+        <Column field="debuffer" body={debufferTemplate} />
+        <Column field="utility" body={utilityTemplate} />
+        <Column field="single-dps" body={singleDpsTemplate} />
+        <Column field="aoe-dps" body={aoeDpsTemplate} />
+        <Column field="s-buffer" body={sBufferTemplate} />
+        <Column field="s-debuffer" body={sDebufferTemplate} />
+        <Column field="s-healer" body={sHealerTemplate} />
       </DataTable>
     </div>
   );

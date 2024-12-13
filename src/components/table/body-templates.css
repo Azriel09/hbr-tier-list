@@ -1,0 +1,39 @@
+.tier-text-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+.tier-text {
+  color: #e37777;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.cell-wrapper {
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.student-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-name {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 20px;
+}
+
+.student-rarity {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 20px;
+}

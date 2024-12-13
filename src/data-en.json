@@ -116,5 +116,27 @@
       "element": "light",
       "section": "31-A"
     }
+  ],
+  "Aoi": [
+    {
+      "id": "aoi_ss1",
+      "rarity": "SS1",
+      "role": ["defender"],
+      "tier": [9],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-B"
+    }
+  ],
+  "Ichigo": [
+    {
+      "id": "ichigo_ss1",
+      "rarity": "SS1",
+      "role": ["single-dps"],
+      "tier": [6],
+      "release-date": "released",
+      "element": "lightning",
+      "section": "31-B"
+    }
   ]
 }
