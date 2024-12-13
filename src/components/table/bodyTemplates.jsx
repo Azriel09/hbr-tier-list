@@ -6,89 +6,40 @@ function BodyTemplates() {
       </div>
     );
   };
-  const bufferTemplate = (rowData) => {
-    if (rowData["role"] === "buffer") {
-      return mainTemplate(rowData.student);
-    } else {
-      return;
-    }
+  const tierBodyTemplate = (rowData) => {
+    let tier = "";
+    console.log(rowData);
+    Object.keys(rowData).map((key) => {
+      tier = key;
+    });
+    return (
+      <div className="flex align-items-center gap-2">
+        <span className="font-bold">{tier}</span>
+      </div>
+    );
   };
-
   const healerTemplate = (rowData) => {
-    if (rowData["role"] === "healer") {
-      return mainTemplate(rowData.student);
-    } else {
-      return;
-    }
+    return Object.keys(rowData).map((data) => {
+      rowData[data].map((info) => {
+        Object.keys(info).map((role, index) => {
+          if (role == "healer" && info[role].length >= 1) {
+            return (
+              <div className="flex align-items-center gap-2" key={index}>
+                {info[role].map((student, i) => {
+                  return <div key={i}>{student["name"]}</div>;
+                })}
+              </div>
+            );
+          } else {
+            return <div>{"ehe"}</div>;
+          }
+        });
+      });
+    });
   };
-  const defenderTemplate = (rowData) => {
-    if (rowData["role"] === "defender") {
-      return mainTemplate(rowData.student);
-    } else {
-      return;
-    }
-  };
-  const debufferTemplate = (rowData) => {
-    if (rowData["role"] === "debuffer") {
-      return mainTemplate(rowData.student);
-    } else {
-      return;
-    }
-  };
-  const utilityTemplate = (rowData) => {
-    if (rowData["role"] === "utility") {
-      return mainTemplate(rowData.student);
-    } else {
-      return;
-    }
-  };
-  const singleDpsTemplate = (rowData) => {
-    if (rowData["role"] === "single-dps") {
-      return mainTemplate(rowData.student);
-    } else {
-      return;
-    }
-  };
-  const aoeDpsTemplate = (rowData) => {
-    if (rowData["role"] === "aoe-dps") {
-      return mainTemplate(rowData.student);
-    } else {
-      return;
-    }
-  };
-  const sBufferTemplate = (rowData) => {
-    if (rowData["role"] === "s-buffer") {
-      return mainTemplate(rowData.student);
-    } else {
-      return;
-    }
-  };
-  const sDebufferTemplate = (rowData) => {
-    if (rowData["role"] === "s-debuffer") {
-      return mainTemplate(rowData.student);
-    } else {
-      return;
-    }
-  };
-  const sHealerTemplate = (rowData) => {
-    if (rowData["role"] === "s-healer") {
-      return mainTemplate(rowData.student);
-    } else {
-      return;
-    }
-  };
-
   return {
-    bufferTemplate,
+    tierBodyTemplate,
     healerTemplate,
-    debufferTemplate,
-    defenderTemplate,
-    utilityTemplate,
-    singleDpsTemplate,
-    aoeDpsTemplate,
-    sBufferTemplate,
-    sDebufferTemplate,
-    sHealerTemplate,
   };
 }
 
