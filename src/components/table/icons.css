@@ -10,16 +10,23 @@
 
 img {
   border-radius: 50%;
-  width: 70px;
+  width: 60px;
+}
+.light {
+  border: 3px solid white;
 }
 .fire {
-  border: 5px solid rgb(225, 88, 88);
+  border: 3px solid rgb(225, 88, 88);
 }
 
 .lightning {
-  border: 5px solid rgb(199, 199, 21);
+  border: 3px solid rgb(199, 199, 21);
 }
 
 .dark {
-  border: 5px solid #e417e7;
+  border: 3px solid #e417e7;
+}
+
+.ice {
+  border: 3px solid #9fc5e8;
 }

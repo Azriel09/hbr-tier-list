@@ -1,5 +1,6 @@
 import "./body-templates.css";
 import IconRenderer from "./icons";
+
 function BodyTemplates() {
   const mainTemplate = (rowData, role) => {
     let tier_arr = rowData["tier_data"];
@@ -8,16 +9,43 @@ function BodyTemplates() {
         {tier_arr.map((t) => {
           if (t[role] && t[role].length >= 1) {
             return t[role].map((s, i) => {
+              let previous_tier;
+              if (
+                s["present_tier"] === undefined ||
+                s["present_tier"].length == 0
+              ) {
+                previous_tier = "new";
+              } else {
+                previous_tier = s["future_tier"][i] - s["present_tier"][i];
+              }
+              let yingxia = false;
+              let yingxia_10 = false;
+              console.log(s["condition"]);
+              if (s["name"] == "Yingxia" && s["rarity"] == "S1") {
+                yingxia = true;
+                if (s["condition"] == "w/ SS1") {
+                  console.log(s["condition"]);
+                  yingxia_10 = true;
+                }
+              }
+
               return (
                 <div className="student-wrapper" key={i}>
                   <IconRenderer
                     student={s["name"]}
                     rarity={s["rarity"]}
                     section={s["section"]}
-                    element={s['element']}
+                    element={s["element"]}
                   />
                   <span className="student-name">{s["name"]}</span>
                   <span className="student-rarity">{s["rarity"]}</span>
+                  {yingxia ? (
+                    yingxia_10 ? (
+                      <span className="student-condition">w/ SS1</span>
+                    ) : (
+                      <span className="student-condition">w/o SS1</span>
+                    )
+                  ) : null}
                 </div>
               );
             });
@@ -37,6 +65,13 @@ function BodyTemplates() {
   };
   const bufferTemplate = (rowData) => {
     return mainTemplate(rowData, "buffer");
+  };
+  const genericBufferTemplate = (rowData) => {
+    return mainTemplate(rowData, "generic-buffer");
+  };
+
+  const elementalBufferTemplate = (rowData) => {
+    return mainTemplate(rowData, "elemental-buffer");
   };
 
   const defenderTemplate = (rowData) => {
@@ -70,6 +105,8 @@ function BodyTemplates() {
   return {
     tierBodyTemplate,
     bufferTemplate,
+    genericBufferTemplate,
+    elementalBufferTemplate,
     defenderTemplate,
     healerTemplate,
     debufferTemplate,

@@ -3,8 +3,10 @@
     {
       "id": "tama_s1",
       "rarity": "S1",
-      "role": ["s-healer"],
-      "tier": [6],
+      "present_role": ["s-healer"],
+      "present_tier": [6],
+      "future_role": ["s-healer"],
+      "future_tier": [5],
       "release-date": "released",
       "element": "null",
       "section": "31-A"
@@ -12,8 +14,10 @@
     {
       "id": "tama_ss1",
       "rarity": "SS1",
-      "role": ["healer"],
-      "tier": [8],
+      "present_role": ["healer"],
+      "present_tier": [8],
+      "future_role": ["healer"],
+      "future_tier": [7],
       "release-date": "released",
       "element": "null",
       "section": "31-A"
@@ -21,10 +25,23 @@
     {
       "id": "tama_ss2",
       "rarity": "SS2",
-      "role": ["healer", "buffer"],
-      "tier": [7, 5],
+      "present_role": ["healer", "buffer"],
+      "present_tier": [7, 5],
+      "future_role": ["healer", "generic-buffer"],
+      "future_tier": [6, 5],
       "release-date": "released",
       "element": "null",
+      "section": "31-A"
+    },
+    {
+      "id": "tama_ss3",
+      "rarity": "SS3",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["single-dps", "healer", "elemental-buffer"],
+      "future_tier": [7, 5, 2],
+      "release-date": "December 19, 2024",
+      "element": "lightning",
       "section": "31-A"
     }
   ],
@@ -32,8 +49,10 @@
     {
       "id": "ruka_ss0",
       "rarity": "SS0",
-      "role": ["healer", "single-dps"],
-      "tier": [3, 3],
+      "present_role": ["healer", "single-dps"],
+      "present_tier": [3, 3],
+      "future_role": ["single-dps", "healer"],
+      "future_tier": [1, 1],
       "release-date": "released",
       "element": "null",
       "section": "31-A"
@@ -41,8 +60,10 @@
     {
       "id": "ruka_ss1",
       "rarity": "SS1",
-      "role": ["single-dps"],
-      "tier": [8],
+      "present_role": ["single-dps"],
+      "present_tier": [8],
+      "future_role": ["single-dps"],
+      "future_tier": [6],
       "release-date": "released",
       "element": "fire",
       "section": "31-A"
@@ -50,10 +71,23 @@
     {
       "id": "ruka_ss2",
       "rarity": "SS2",
-      "role": ["aoe-dps"],
-      "tier": [8],
+      "present_role": ["aoe-dps"],
+      "present_tier": [8],
+      "future_role": ["aoe-dps"],
+      "future_tier": [7],
       "release-date": "released",
       "element": "light",
+      "section": "31-A"
+    },
+    {
+      "id": "ruka_ss3",
+      "rarity": "SS3",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["single-dps"],
+      "future_tier": [7],
+      "release-date": "n/a",
+      "element": "lightning",
       "section": "31-A"
     }
   ],
@@ -61,8 +95,10 @@
     {
       "id": "yuki_ss1",
       "rarity": "SS1",
-      "role": ["aoe-dps"],
-      "tier": [0],
+      "present_role": ["aoe-dps"],
+      "present_tier": [0],
+      "future_role": ["aoe-dps"],
+      "future_tier": [0],
       "release-date": "released",
       "element": "null",
       "section": "31-A"
@@ -70,10 +106,47 @@
     {
       "id": "yuki_ss2",
       "rarity": "SS2",
-      "role": ["single-dps"],
-      "tier": [2],
+      "present_role": ["single-dps"],
+      "present_tier": [2],
+      "future_role": ["single-dps"],
+      "future_tier": [0],
       "release-date": "released",
       "element": "fire",
+      "section": "31-A"
+    },
+    {
+      "id": "yuki_ss3",
+      "rarity": "SS3",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["aoe-dps"],
+      "future_tier": [8],
+      "release-date": "n/a",
+      "element": "lightning",
+      "section": "31-A"
+    }
+  ],
+  "Tsukasa": [
+    {
+      "id": "tsukasa_ss1",
+      "rarity": "SS1",
+      "present_role": ["buffer"],
+      "present_tier": [6],
+      "future_role": ["elemental-buffer"],
+      "future_tier": [6],
+      "release-date": "released",
+      "element": "fire",
+      "section": "31-A"
+    },
+    {
+      "id": "tsukasa_ss2",
+      "rarity": "SS2",
+      "present_role": ["buffer"],
+      "present_tier": [6],
+      "future_role": ["generic-buffer"],
+      "future_tier": [6],
+      "release-date": "released",
+      "element": "null",
       "section": "31-A"
     }
   ],
@@ -81,8 +154,10 @@
     {
       "id": "karen_ss1",
       "rarity": "SS1",
-      "role": ["utility", "single-dps"],
-      "tier": [6, 5],
+      "present_role": ["utility", "single-dps"],
+      "present_tier": [6, 5],
+      "future_role": ["utility", "single-dps"],
+      "future_tier": [5, 2],
       "release-date": "released",
       "element": "null",
       "section": "31-A"
@@ -90,8 +165,10 @@
     {
       "id": "karen_ss2",
       "rarity": "SS2",
-      "role": ["utility", "aoe-dps"],
-      "tier": [6, 4],
+      "present_role": ["utility", "aoe-dps"],
+      "present_tier": [6, 4],
+      "future_role": ["utility", "aoe-dps"],
+      "future_tier": [5, 4],
       "release-date": "released",
       "element": "fire",
       "section": "31-A"
@@ -101,8 +178,10 @@
     {
       "id": "megumi_ss1",
       "rarity": "SS1",
-      "role": ["utility"],
-      "tier": [1],
+      "present_role": ["utility"],
+      "present_tier": [1],
+      "future_role": ["utility"],
+      "future_tier": [0],
       "release-date": "released",
       "element": "null",
       "section": "31-A"
@@ -110,21 +189,180 @@
     {
       "id": "megumi_ss2",
       "rarity": "SS2",
-      "role": ["debuffer"],
-      "tier": [8],
+      "present_role": ["debuffer"],
+      "present_tier": [8],
+      "future_role": ["debuffer"],
+      "future_tier": [7],
       "release-date": "released",
       "element": "light",
       "section": "31-A"
+    },
+    {
+      "id": "megumi_ss3",
+      "rarity": "SS3",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["debuffer"],
+      "future_tier": [9],
+      "release-date": "n/a",
+      "element": "fire",
+      "section": "31-A"
+    }
+  ],
+  "Chie": [
+    {
+      "id": "chie_ss1",
+      "rarity": "SS1",
+      "present_role": ["aoe-dps", "defender"],
+      "present_tier": [5, 0],
+      "future_role": ["defender"],
+      "future_tier": [0],
+      "release-date": "released",
+      "element": "null",
+      "section": "30-G"
+    },
+    {
+      "id": "chie_ss2",
+      "rarity": "SS2",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["single-dps"],
+      "future_tier": [8],
+      "release-date": "n/a",
+      "element": "dark",
+      "section": "30-G"
+    }
+  ],
+  "Hisame": [
+    {
+      "id": "hisame_ss1",
+      "rarity": "SS1",
+      "present_role": ["debuffer", "aoe-dps"],
+      "present_tier": [4, 1],
+      "future_role": ["debuffer", "aoe-dps"],
+      "future_tier": [3, 1],
+      "release-date": "released",
+      "element": "null",
+      "section": "30-G"
+    },
+    {
+      "id": "hisame_ss2",
+      "rarity": "SS2",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["aoe-dps"],
+      "future_tier": [5],
+      "release-date": "n/a",
+      "element": "dark",
+      "section": "30-G"
+    }
+  ],
+  "Miya": [
+    {
+      "id": "miya_s1",
+      "rarity": "S1",
+      "present_role": ["debuffer"],
+      "present_tier": [6],
+      "future_role": [],
+      "future_tier": [],
+      "release-date": "released",
+      "element": "null",
+      "section": "30-G"
+    },
+    {
+      "id": "miya_ss1",
+      "rarity": "SS1",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["debuffer"],
+      "future_tier": [7],
+      "release-date": "n/a",
+      "element": "light",
+      "section": "30-G"
+    }
+  ],
+  "Monaka": [
+    {
+      "id": "monaka_ss1",
+      "rarity": "SS1",
+      "present_role": ["aoe-dps"],
+      "present_tier": [6],
+      "future_role": ["aoe-dps"],
+      "future_tier": [6],
+      "release-date": "released",
+      "element": "dark",
+      "section": "30-G"
+    }
+  ],
+  "Satomi Kura": [
+    {
+      "id": "satomi_kura_ss1",
+      "rarity": "SS1",
+      "present_role": ["utility"],
+      "present_tier": [5],
+      "future_role": ["utility"],
+      "future_tier": [3],
+      "release-date": "released",
+      "element": "light",
+      "section": "30-G"
+    },
+    {
+      "id": "satomi_kura_ss2",
+      "rarity": "SS2",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["aoe-dps", "utility"],
+      "future_tier": [3, 2],
+      "release-date": "n/a",
+      "element": "light",
+      "section": "30-G"
+    }
+  ],
+  "Yuina": [
+    {
+      "id": "yuina_ss1",
+      "rarity": "SS1",
+      "present_role": ["single-dps"],
+      "present_tier": [6],
+      "future_role": ["single-dps"],
+      "future_tier": [4],
+      "release-date": "released",
+      "element": "light",
+      "section": "30-G"
+    },
+    {
+      "id": "yuina_ss2",
+      "rarity": "SS2",
+      "present_role": ["utility", "aoe-dps"],
+      "present_tier": [7, 2],
+      "future_role": ["utility", "aoe-dps"],
+      "future_tier": [7, 3],
+      "release-date": "released",
+      "element": "lightning",
+      "section": "30-G"
     }
   ],
   "Aoi": [
     {
       "id": "aoi_ss1",
       "rarity": "SS1",
-      "role": ["defender"],
-      "tier": [9],
+      "present_role": ["defender"],
+      "present_tier": [9],
+      "future_role": ["defender"],
+      "future_tier": [9],
       "release-date": "released",
       "element": "null",
+      "section": "31-B"
+    },
+    {
+      "id": "aoi_ss2",
+      "rarity": "SS2",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["single-dps"],
+      "future_tier": [10],
+      "release-date": "n/a",
+      "element": "lightning",
       "section": "31-B"
     }
   ],
@@ -132,11 +370,570 @@
     {
       "id": "ichigo_ss1",
       "rarity": "SS1",
-      "role": ["single-dps"],
-      "tier": [6],
+      "present_role": ["single-dps"],
+      "present_tier": [6],
+      "future_role": ["single-dps"],
+      "future_tier": [4],
       "release-date": "released",
       "element": "lightning",
       "section": "31-B"
+    }
+  ],
+  "Byakko": [
+    {
+      "id": "byakko_ss1",
+      "rarity": "SS1",
+      "present_role": ["utility"],
+      "present_tier": [4],
+      "future_role": ["utility"],
+      "future_tier": [3],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-B"
+    },
+    {
+      "id": "byakko_ss2",
+      "rarity": "SS2",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["utility"],
+      "future_tier": [7],
+      "release-date": "n/a",
+      "element": "lightning",
+      "section": "31-B"
+    }
+  ],
+  "Seika": [
+    {
+      "id": "seika_ss1",
+      "rarity": "SS1",
+      "present_role": ["buffer"],
+      "present_tier": [8],
+      "future_role": ["elemental-buffer"],
+      "future_tier": [8],
+      "release-date": "released",
+      "element": "lightning",
+      "section": "31-B"
+    },
+    {
+      "id": "seika_ss2",
+      "rarity": "SS2",
+      "present_role": ["buffer", "healer"],
+      "present_tier": [10, 0],
+      "future_role": ["generic-buffer", "healer"],
+      "future_tier": [10, 0],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-B"
+    }
+  ],
+  "Kozue": [
+    {
+      "id": "kozue_s1",
+      "rarity": "S1",
+      "present_role": ["debuffer"],
+      "present_tier": [5],
+      "future_role": [],
+      "future_tier": [],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-B"
+    },
+    {
+      "id": "kozue_ss1",
+      "rarity": "SS1",
+      "present_role": ["utility"],
+      "present_tier": [5],
+      "future_role": ["utility"],
+      "future_tier": [3],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-B"
+    },
+    {
+      "id": "kozue_ss2",
+      "rarity": "SS2",
+      "present_role": ["debuffer"],
+      "present_tier": [6],
+      "future_role": ["debuffer"],
+      "future_tier": [6],
+      "release-date": "released",
+      "element": "ice",
+      "section": "31-B"
+    }
+  ],
+  "Adelheid": [
+    {
+      "id": "adelheid_ss1",
+      "rarity": "SS1",
+      "present_role": ["aoe-dps"],
+      "present_tier": [5],
+      "future_role": ["aoe-dps"],
+      "future_tier": [2],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-C"
+    },
+    {
+      "id": "adelheid_ss2",
+      "rarity": "SS2",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["single-dps"],
+      "future_tier": [9],
+      "release-date": "n/a",
+      "element": "ice",
+      "section": "31-C"
+    }
+  ],
+  "Ivar Bon": [
+    {
+      "id": "ivar_bon_ss1",
+      "rarity": "SS1",
+      "present_role": ["single-dps"],
+      "present_tier": [8],
+      "future_role": ["single-dps"],
+      "future_tier": [6],
+      "release-date": "released",
+      "element": "ice",
+      "section": "31-C"
+    },
+    {
+      "id": "ivar_bon_ss2",
+      "rarity": "SS2",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["elemental-buffer", "aoe-dps"],
+      "future_tier": [3, 0],
+      "release-date": "released",
+      "element": "ice",
+      "section": "31-C"
+    }
+  ],
+  "Mari": [
+    {
+      "id": "mari_ss1",
+      "rarity": "SS1",
+      "present_role": ["buffer"],
+      "present_tier": [7],
+      "future_role": ["elemental-buffer"],
+      "future_tier": [6],
+      "release-date": "released",
+      "element": "ice",
+      "section": "31-C"
+    },
+    {
+      "id": "mari_ss2",
+      "rarity": "SS2",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["generic-buffer"],
+      "future_tier": [9],
+      "release-date": "n/a",
+      "element": "null",
+      "section": "31-C"
+    }
+  ],
+  "Miko": [
+    {
+      "id": "miko_ss1",
+      "rarity": "SS1",
+      "present_role": ["debuffer"],
+      "present_tier": [5],
+      "future_role": ["debuffer"],
+      "future_tier": [5],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-C"
+    }
+  ],
+  "Seira": [
+    {
+      "id": "seira_ss1",
+      "rarity": "SS1",
+      "present_role": ["buffer", "healer"],
+      "present_tier": [8, 4],
+      "future_role": ["generic-buffer", "healer"],
+      "future_tier": [6, 2],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-C"
+    },
+    {
+      "id": "seira_ss2",
+      "rarity": "SS2",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["defender", "elemental-buffer"],
+      "future_tier": [7, 3],
+      "release-date": "n/a",
+      "element": "ice",
+      "section": "31-C"
+    }
+  ],
+  "Yayoi": [
+    {
+      "id": "yayoi_ss1",
+      "rarity": "SS1",
+      "present_role": ["single-dps"],
+      "present_tier": [4],
+      "future_role": ["single-dps"],
+      "future_tier": [2],
+      "release-date": "released",
+      "element": "ice",
+      "section": "31-C"
+    },
+    {
+      "id": "yayoi_ss2",
+      "rarity": "SS2",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["single-dps"],
+      "future_tier": [4],
+      "release-date": "n/a",
+      "element": "light",
+      "section": "31-C"
+    }
+  ],
+  "Aina": [
+    {
+      "id": "aina_s1",
+      "rarity": "S1",
+      "present_role": ["s-debuffer"],
+      "present_tier": [7],
+      "future_role": ["s-debuffer"],
+      "future_tier": [7],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-D"
+    },
+    {
+      "id": "aina_ss1",
+      "rarity": "SS1",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["utility", "debuffer"],
+      "future_tier": [9, 8],
+      "release-date": "n/a",
+      "element": "null",
+      "section": "31-D"
+    }
+  ],
+  "Fubuki": [
+    {
+      "id": "fubuki_ss1",
+      "rarity": "SS1",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["debuffer"],
+      "future_tier": [8],
+      "release-date": "n/a",
+      "element": "null",
+      "section": "31-D"
+    }
+  ],
+  "Iroha": [
+    {
+      "id": "iroha_ss1",
+      "rarity": "SS1",
+      "present_role": ["buffer"],
+      "present_tier": [4],
+      "future_role": ["elemental-buffer"],
+      "future_tier": [4],
+      "release-date": "released",
+      "element": "dark",
+      "section": "31-D"
+    }
+  ],
+  "Misato": [
+    {
+      "id": "misato_ss1",
+      "rarity": "SS1",
+      "present_role": ["single-dps"],
+      "present_tier": [1],
+      "future_role": ["single-dps"],
+      "future_tier": [0],
+      "release-date": "released",
+      "element": "dark",
+      "section": "31-D"
+    }
+  ],
+  "Risa": [
+    {
+      "id": "risa_ss1",
+      "rarity": "SS1",
+      "present_role": ["healer"],
+      "present_tier": [6],
+      "future_role": ["healer"],
+      "future_tier": [3],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-D"
+    }
+  ],
+  "Ichiko": [
+    {
+      "id": "ichiko_ss1",
+      "rarity": "SS1",
+      "present_role": ["defender", "buffer"],
+      "present_tier": [7, 3],
+      "future_role": ["defender", "elemental-buffer"],
+      "future_tier": [7, 3],
+      "release-date": "released",
+      "element": "fire",
+      "section": "31-E"
+    }
+  ],
+  "Isuzu": [
+    {
+      "id": "isuzu_s1",
+      "rarity": "S1",
+      "present_role": ["s-debuffer"],
+      "present_tier": [4],
+      "future_role": [],
+      "future_tier": [],
+      "release-date": "released",
+      "element": "fire",
+      "section": "31-E"
+    },
+    {
+      "id": "isuzu_ss1",
+      "rarity": "SS1",
+      "present_role": ["debuffer"],
+      "present_tier": [6],
+      "future_role": ["debuffer"],
+      "future_tier": [6],
+      "release-date": "released",
+      "element": "fire",
+      "section": "31-E"
+    }
+  ],
+  "Minori": [
+    {
+      "id": "minori_ss1",
+      "rarity": "SS1",
+      "present_role": ["buffer", "aoe-dps"],
+      "present_tier": [3, 3],
+      "future_role": ["generic-buffer", "aoe-dps"],
+      "future_tier": [1, 3],
+      "release-date": "released",
+      "element": "fire",
+      "section": "31-E"
+    }
+  ],
+  "Muua": [
+    {
+      "id": "muua_s1",
+      "rarity": "S1",
+      "present_role": ["s-healer"],
+      "present_tier": [6],
+      "future_role": ["s-healer"],
+      "future_tier": [5],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-E"
+    },
+    {
+      "id": "muua_ss1",
+      "rarity": "SS1",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["healer"],
+      "future_tier": [10],
+      "release-date": "n/a",
+      "element": "null",
+      "section": "31-E"
+    }
+  ],
+  "Niina": [
+    {
+      "id": "niina_ss1",
+      "rarity": "SS1",
+      "present_role": ["utility"],
+      "present_tier": [7],
+      "future_role": ["utility"],
+      "future_tier": [7],
+      "release-date": "released",
+      "element": "fire",
+      "section": "31-E"
+    }
+  ],
+  "Yotsuha": [
+    {
+      "id": "yotsuha_ss1",
+      "rarity": "SS1",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["elemental-buffer"],
+      "future_tier": [10],
+      "release-date": "n/a",
+      "element": "fire",
+      "section": "31-E"
+    }
+  ],
+  "Chiroru": [
+    {
+      "id": "chiroru_ss1",
+      "rarity": "SS1",
+      "present_role": ["defender"],
+      "present_tier": [2],
+      "future_role": ["utility", "defender"],
+      "future_tier": [5, 2],
+      "release-date": "released",
+      "element": "dark",
+      "section": "31-F"
+    }
+  ],
+  "Inori": [
+    {
+      "id": "kanata_ss1",
+      "rarity": "SS1",
+      "present_role": ["single-dps"],
+      "present_tier": [8],
+      "future_role": ["single-dps"],
+      "future_tier": [6],
+      "release-date": "released",
+      "element": "dark",
+      "section": "31-F"
+    }
+  ],
+  "Kanata": [
+    {
+      "id": "kanata_ss1",
+      "rarity": "SS1",
+      "present_role": ["single-dps"],
+      "present_tier": [7],
+      "future_role": ["single-dps"],
+      "future_tier": [5],
+      "release-date": "released",
+      "element": "dark",
+      "section": "31-F"
+    }
+  ],
+  "Maki": [
+    {
+      "id": "maki_ss1",
+      "rarity": "SS1",
+      "present_role": ["debuffer"],
+      "present_tier": [5],
+      "future_role": ["debuffer", "utility"],
+      "future_tier": [5, 4],
+      "release-date": "released",
+      "element": "dark",
+      "section": "31-F"
+    }
+  ],
+  "Mion": [
+    {
+      "id": "mion_ss1",
+      "rarity": "SS1",
+      "present_role": ["healer"],
+      "present_tier": [7],
+      "future_role": ["healer"],
+      "future_tier": [7],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-F"
+    }
+  ],
+  "Shiki": [
+    {
+      "id": "shiki_s1",
+      "rarity": "S1",
+      "present_role": ["s-buffer"],
+      "present_tier": [7],
+      "future_role": ["s-buffer"],
+      "future_tier": [7],
+      "release-date": "released",
+      "element": "dark",
+      "section": "31-F"
+    },
+    {
+      "id": "shiki_ss1",
+      "rarity": "SS1",
+      "present_role": ["buffer"],
+      "present_tier": [4],
+      "future_role": ["elemental-buffer"],
+      "future_tier": [3],
+      "release-date": "released",
+      "element": "dark",
+      "section": "31-F"
+    }
+  ],
+  "Carole": [
+    {
+      "id": "carole_ss1",
+      "rarity": "SS1",
+      "present_role": ["aoe-dps"],
+      "present_tier": [6],
+      "future_role": ["aoe-dps"],
+      "future_tier": [5],
+      "release-date": "released",
+      "element": "lightning",
+      "section": "31-X"
+    }
+  ],
+  "Irene": [
+    {
+      "id": "irene_ss1",
+      "rarity": "SS1",
+      "present_role": ["aoe-dps"],
+      "present_tier": [8],
+      "future_role": ["aoe-dps"],
+      "future_tier": [2],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-X"
+    }
+  ],
+  "Maria": [
+    {
+      "id": "maria_ss1",
+      "rarity": "SS1",
+      "present_role": ["single-dps"],
+      "present_tier": [7],
+      "future_role": ["single-dps"],
+      "future_tier": [6],
+      "release-date": "released",
+      "element": "ice",
+      "section": "31-X"
+    }
+  ],
+  "Yingxia": [
+    {
+      "id": "yingxia_s1",
+      "rarity": "S1",
+      "present_role": ["s-debuffer"],
+      "present_tier": [10],
+      "future_role": ["s-debuffer"],
+      "future_tier": [10],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-X",
+      "condition": "w/ SS1"
+    },
+    {
+      "id": "yingxia_s1",
+      "rarity": "S1",
+      "present_role": ["s-debuffer"],
+      "present_tier": [8],
+      "future_role": ["s-debuffer"],
+      "future_tier": [9],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-X",
+      "condition": "w/o SS1"
+    },
+    {
+      "id": "yingxia_ss1",
+      "rarity": "SS1",
+      "present_role": ["buffer"],
+      "present_tier": [10],
+      "future_role": ["generic-buffer"],
+      "future_tier": [10],
+      "release-date": "released",
+      "element": "null",
+      "section": "31-X"
     }
   ]
 }
