@@ -1,6 +1,7 @@
 .top-bar {
+  padding-top: 20px;
   background: #1c1d21;
-  height: 50px;
+  height: 100%;
 }
 
 .title-container {
@@ -15,9 +16,13 @@
   margin: 0;
   text-align: center;
   font-family: "Chakra Petch", sans-serif;
+  font-size: 30px;
+}
+.local-time {
+  font-family: "Chakra Petch", sans-serif;
   font-size: 20px;
 }
 
 .header-highlight {
-    color: red;
+  color: red;
 }

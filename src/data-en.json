@@ -202,8 +202,8 @@
       "rarity": "SS3",
       "present_role": [],
       "present_tier": [],
-      "future_role": ["debuffer"],
-      "future_tier": [9],
+      "future_role": ["debuffer", "single-dps"],
+      "future_tier": [9, 7],
       "release-date": "n/a",
       "element": "fire",
       "section": "31-A"
@@ -294,9 +294,9 @@
       "section": "30-G"
     }
   ],
-  "Satomi Kura": [
+  "Kura": [
     {
-      "id": "satomi_kura_ss1",
+      "id": "kura_ss1",
       "rarity": "SS1",
       "present_role": ["utility"],
       "present_tier": [5],
@@ -307,7 +307,7 @@
       "section": "30-G"
     },
     {
-      "id": "satomi_kura_ss2",
+      "id": "kura_ss2",
       "rarity": "SS2",
       "present_role": [],
       "present_tier": [],
@@ -505,7 +505,7 @@
       "present_tier": [],
       "future_role": ["elemental-buffer", "aoe-dps"],
       "future_tier": [3, 0],
-      "release-date": "released",
+      "release-date": "December 19, 2024",
       "element": "ice",
       "section": "31-C"
     }
@@ -590,7 +590,7 @@
       "present_tier": [],
       "future_role": ["single-dps"],
       "future_tier": [4],
-      "release-date": "n/a",
+      "release-date": "December 19, 2024",
       "element": "light",
       "section": "31-C"
     }
@@ -934,6 +934,34 @@
       "release-date": "released",
       "element": "null",
       "section": "31-X"
+    }
+  ],
+
+  "Kanade": [
+    {
+      "id": "kanade_ss1",
+      "rarity": "SS1",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["single-dps"],
+      "future_tier": [7],
+      "release-date": "n/a",
+      "element": "light",
+      "section": "Angel Beats"
+    }
+  ],
+
+  "Yuri": [
+    {
+      "id": "yuri_ss1",
+      "rarity": "SS1",
+      "present_role": [],
+      "present_tier": [],
+      "future_role": ["single-dps"],
+      "future_tier": [7],
+      "release-date": "n/a",
+      "element": "fire",
+      "section": "Angel Beats"
     }
   ]
 }

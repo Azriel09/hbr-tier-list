@@ -1,0 +1,24 @@
+{
+  "Events": [
+    {
+      "name": "Score Challenge #03"
+    }
+  ],
+  "Recruitment": [
+    {
+      "id": "r_001",
+      "name": "SS-Guranteed Chapter 4—Part 1 Release Celebration Ticket Requirement",
+      "start_date": "2024-12-06T00:00:00-07:00",
+      "end_date": "2025-01-04T23:59:59-07:00",
+      "link": "https://hbr-gs.yo-star.com/web/announcement/400000301?region=2&language=2&phoneType=4&userId=1763214651253513&token=aa8fe04e735f3c35666d925c780e34f3&version=4.0.1&assetVersion=4.0.1&token=aa8fe04e735f3c35666d925c780e34f3"
+    },
+    {
+      "id": "r_002",
+      "name": "SS Yingxia Li & Maria de Angelis! Featured Platinum Recruitment",
+      "start_date": "2024-12-06T00:00:00-07:00",
+      "end_date": "2025-01-02T23:59:59-07:00",
+      "link": "https://hbr-gs.yo-star.com/web/announcement/400000511?region=2&language=2&phoneType=4&userId=1763214651253513&token=aa8fe04e735f3c35666d925c780e34f3&version=4.0.1&assetVersion=4.0.1&token=aa8fe04e735f3c35666d925c780e34f3"
+    }
+  ],
+  "Campaign": []
+}

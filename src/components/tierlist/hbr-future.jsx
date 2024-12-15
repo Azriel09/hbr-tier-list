@@ -3,7 +3,6 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { ColumnGroup } from "primereact/columngroup";
 import { Row } from "primereact/row";
-
 import BodyTemplates from "./bodyTemplates";
 
 const roles = [
@@ -19,23 +18,24 @@ const roles = [
   "s-debuffer",
   "s-healer",
 ];
+const {
+  tierBodyTemplate,
+  genericBufferTemplate,
+  elementalBufferTemplate,
+  defenderTemplate,
+  healerTemplate,
+  debufferTemplate,
+  utilityTemplate,
+  singleDpsTemplate,
+  aoeDpsTemplate,
+  sBufferTemplate,
+  sDebufferTemplate,
+  sHealerTemplate,
+} = BodyTemplates();
+
 export default function HBRFuture({ dataEN, selected }) {
   const [tierData, setTierData] = useState();
-  const {
-    tierBodyTemplate,
 
-    genericBufferTemplate,
-    elementalBufferTemplate,
-    defenderTemplate,
-    healerTemplate,
-    debufferTemplate,
-    utilityTemplate,
-    singleDpsTemplate,
-    aoeDpsTemplate,
-    sBufferTemplate,
-    sDebufferTemplate,
-    sHealerTemplate,
-  } = BodyTemplates();
   useEffect(() => {
     let data = [];
 
@@ -110,7 +110,6 @@ export default function HBRFuture({ dataEN, selected }) {
                         future_tier: student["future_tier"],
                       };
                       if (name == "Yingxia" && rarity == "S1") {
-                        console.log(student["condition"]);
                         obj_data = {
                           ...obj_data,
                           condition: student["condition"],
@@ -135,7 +134,6 @@ export default function HBRFuture({ dataEN, selected }) {
 
   // How the data would look like after the useEffect
   // I could just format the json file this way but that would be boring
-
   let tierDataFormatExample = [
     {
       tier: 10,
@@ -217,14 +215,6 @@ export default function HBRFuture({ dataEN, selected }) {
     },
   ];
 
-  const roleBodyTemplate = (rowData) => {
-    return (
-      <div className="flex align-items-center gap-2">
-        {console.log(rowData)}
-        <span className="font-bold">{rowData.student}</span>
-      </div>
-    );
-  };
   const headerGroup = (
     <ColumnGroup>
       <Row>
@@ -249,19 +239,23 @@ export default function HBRFuture({ dataEN, selected }) {
       </Row>
     </ColumnGroup>
   );
+
   return (
-    <div className="card">
+    <div className="table-container">
       <DataTable
         value={tierData}
         headerColumnGroup={headerGroup}
         tableStyle={{ minWidth: "50rem" }}
+        globalFilterFields={["name"]}
         rowGroupMode="rowspan"
         groupRowsBy="tier"
         sortField="tier"
         showGridlines
+        scrollable
+        scrollHeight="70vh"
         sortOrder={-1}
       >
-        <Column field="tier" body={tierBodyTemplate} />
+        <Column frozen field="tier" body={tierBodyTemplate} />
         <Column field="generic-buffer" body={genericBufferTemplate} />
         <Column field="elemental-buffer" body={elementalBufferTemplate} />
         <Column field="defender" body={defenderTemplate} />

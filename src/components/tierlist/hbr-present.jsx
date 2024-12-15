@@ -3,7 +3,6 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { ColumnGroup } from "primereact/columngroup";
 import { Row } from "primereact/row";
-
 import BodyTemplates from "./bodyTemplates";
 
 const {
@@ -103,7 +102,6 @@ export default function HBRPresent({ dataEN, selected }) {
                         release: release,
                       };
                       if (name == "Yingxia" && rarity == "S1") {
-                        console.log(student["condition"]);
                         obj_data = {
                           ...obj_data,
                           condition: student["condition"],
@@ -248,9 +246,11 @@ export default function HBRPresent({ dataEN, selected }) {
         headerColumnGroup={headerGroup}
         tableStyle={{ minWidth: "50rem" }}
         showGridlines
+        scrollable
+        scrollHeight="80vh"
         sortOrder={-1}
       >
-        <Column field="tier" body={tierBodyTemplate} />
+        <Column frozen field="tier" body={tierBodyTemplate} />
         <Column field="buffer" body={bufferTemplate} />
         <Column field="defender" body={defenderTemplate} />
         <Column field="healer" body={healerTemplate} />

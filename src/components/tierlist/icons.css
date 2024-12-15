@@ -13,20 +13,20 @@ img {
   width: 60px;
 }
 .light {
-  border: 3px solid white;
+  border: 5px solid white;
 }
 .fire {
-  border: 3px solid rgb(225, 88, 88);
+  border: 5px solid rgb(225, 88, 88);
 }
 
 .lightning {
-  border: 3px solid rgb(199, 199, 21);
+  border: 5px solid rgb(199, 199, 21);
 }
 
 .dark {
-  border: 3px solid #e417e7;
+  border: 5px solid #e417e7;
 }
 
 .ice {
-  border: 3px solid #9fc5e8;
+  border: 5px solid #9fc5e8;
 }

@@ -20,11 +20,10 @@ function BodyTemplates() {
               }
               let yingxia = false;
               let yingxia_10 = false;
-              console.log(s["condition"]);
+
               if (s["name"] == "Yingxia" && s["rarity"] == "S1") {
                 yingxia = true;
                 if (s["condition"] == "w/ SS1") {
-                  console.log(s["condition"]);
                   yingxia_10 = true;
                 }
               }
