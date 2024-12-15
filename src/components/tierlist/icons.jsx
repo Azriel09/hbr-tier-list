@@ -12,7 +12,8 @@ export default function IconRenderer({ student, rarity, section, element }) {
   return (
     <div className="image-gallery">
       <img
-        className={element}
+      
+        className={`${element} tierlist-img`}
         key={`${student}${rarity}`}
         src={`./src/assets/icons/${section}/${student}/${rarity}.webp`}
         alt={`${student}${rarity}`}

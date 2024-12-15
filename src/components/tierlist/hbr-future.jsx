@@ -252,7 +252,7 @@ export default function HBRFuture({ dataEN, selected }) {
         sortField="tier"
         showGridlines
         scrollable
-        scrollHeight="70vh"
+        scrollHeight="80vh"
         sortOrder={-1}
       >
         <Column frozen field="tier" body={tierBodyTemplate} />

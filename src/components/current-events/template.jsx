@@ -74,7 +74,7 @@ export default function EventTemplate({
         <div className="template-wrapper">
           <h4>{title}</h4>
 
-          <img src={`./src/assets/events/${banner_id}.png`} />
+          <img src={`./src/assets/events/${banner_id}.png`} className="banner-img"/>
           <div>
             {remainingTime.days} days, {remainingTime.hours} hours,{" "}
             {remainingTime.minutes} minutes, {remainingTime.seconds} seconds
