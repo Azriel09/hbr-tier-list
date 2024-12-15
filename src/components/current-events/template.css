@@ -1,0 +1,29 @@
+.event-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.template-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.template-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+img {
+  width: 400px;
+  border-radius: 0;
+}

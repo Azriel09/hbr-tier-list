@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import "./template.css";
 export default function EventTemplate({
   start_date,
   target_date,
   title,
   link,
+  banner_id,
 }) {
   const [remainingTime, setRemainingTime] = useState({
     days: 0,
@@ -23,14 +25,6 @@ export default function EventTemplate({
     (offset < 0 ? "-" : "+") +
     String(Math.abs(offset)).padStart(2, "0") +
     ":00";
-
-  const serverDate = formattedDate + timezoneOffset;
-  if (serverDate >= start_date && serverDate <= target_date) {
-    console.log("The current time falls within the range.");
-  } else {
-    return;
-  }
-
   const converted_target_date = new Date(target_date);
 
   const unix_target_date = converted_target_date.getTime();
@@ -72,13 +66,21 @@ export default function EventTemplate({
     // Clear the interval when the component is unmounted
     return () => clearInterval(intervalId);
   }, []);
+  const serverDate = formattedDate + timezoneOffset;
+
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>
-        {remainingTime.days} days, {remainingTime.hours} hours,{" "}
-        {remainingTime.minutes} minutes, {remainingTime.seconds} seconds
-      </p>
+    <div className="template-container">
+      {serverDate >= start_date && serverDate <= target_date ? (
+        <div className="template-wrapper">
+          <h4>{title}</h4>
+
+          <img src={`./src/assets/events/${banner_id}.png`} />
+          <div>
+            {remainingTime.days} days, {remainingTime.hours} hours,{" "}
+            {remainingTime.minutes} minutes, {remainingTime.seconds} seconds
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

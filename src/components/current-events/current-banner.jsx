@@ -3,7 +3,7 @@ import EventTemplate from "./template";
 
 export default function CurrentBanner({ data }) {
   return (
-    <div>
+    <div className="event-container">
       {data["Recruitment"].map((banner, i) => {
         console.log(banner);
         return (
@@ -13,6 +13,7 @@ export default function CurrentBanner({ data }) {
             target_date={banner["end_date"]}
             title={banner["name"]}
             link={banner["link"]}
+            banner_id={banner["id"]}
           />
         );
       })}

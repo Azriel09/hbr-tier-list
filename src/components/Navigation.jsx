@@ -33,6 +33,7 @@ export default function Navigation() {
             <h3 className="local-time">
               Server Time: {serverTime} - {serverDate}
             </h3>
+            
           </div>
         </div>
       </div>
